@@ -742,7 +742,7 @@
         var pc = (maxval * percentage / 100).toFixed(decimal_digits);
         range1.val(pc);
         if (Number(range1.val()) >= Number(range2.val())) {
-          Number(range2.val(Number(range1.val())));
+        range2.val(Number(range1.val()));
         }
 
       };
@@ -781,7 +781,7 @@
         var pc = (maxval * percentage / 100).toFixed(decimal_digits);
         range2.val(pc);
         if (Number(range1.val()) >= Number(range2.val())) {
-          Number(range1.val(Number(range2.val())));
+          range1.val(Number(range2.val()));
         }
 
       };
@@ -865,7 +865,7 @@
         handle1.css('left', percentage + '%');
 
         if (Number(range1.val()) >= Number(range2.val())) {
-          Number(range2.val(Number(range1.val())));
+       range2.val(Number(range1.val()));
           handle2.css('left', percentage + '%');
 
         }
@@ -887,7 +887,7 @@
         handle2.css('left', percentage + '%');
 
         if (Number(range1.val()) >= Number(range2.val())) {
-          Number(range1.val(Number(range2.val())));
+         range1.val(Number(range2.val()));
           handle1.css('left', percentage + '%');
         }
         var left = handle1.position().left;
